@@ -1,0 +1,24 @@
+{
+  "name": "101234383_comp3133_assignment1",
+  "version": "1.0.0",
+  "description": "Assignment1",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Minh Duc Cung",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.3",
+    "graphql": "^15.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
