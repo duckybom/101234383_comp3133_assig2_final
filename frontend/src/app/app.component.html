@@ -1,0 +1,13 @@
+<h1>101234383_comp3133_assig2_final</h1>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link routerLink="/home" *ngIf="isValid; else isLogout">Home</a>
+  <ng-template #isLogout>
+    <a mat-tab-link routerLink="/login">Login</a>
+  </ng-template>
+  <a mat-tab-link routerLink="/booking" *ngIf="isValid; else isSignup">Booking</a>
+  <ng-template #isSignup>
+    <a mat-tab-link routerLink="/signup">Sign up</a>
+  </ng-template>
+  <a mat-tab-link routerLink="/search">Search</a>
+</nav>
+<router-outlet></router-outlet>
