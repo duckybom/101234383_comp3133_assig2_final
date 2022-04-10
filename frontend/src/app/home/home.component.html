@@ -1,0 +1,17 @@
+<div class="main">
+    <h1>101234383_comp3133_assig2_final</h1>
+    <div *ngFor="let item of hotels">
+      <mat-card class="example-card">
+        <mat-card-content>
+          <mat-card-title>{{item.hotel_name}}</mat-card-title>
+          <mat-card-subtitle>{{item.city}}</mat-card-subtitle>
+          <mat-card-subtitle>{{item.street}} {{item.postal_code}}</mat-card-subtitle>
+          <p>Price ${{item.price}} </p>
+          <p>Email {{item.email}} </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" routerLink="/reserve">Go to reserve</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <button mat-raised-button color="primary" (click)="logOut()" class="main">logout</button>

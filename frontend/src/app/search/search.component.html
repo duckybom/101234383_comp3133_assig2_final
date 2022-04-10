@@ -1,0 +1,29 @@
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Search By Name">
+      <div class="main">
+        <form #searchForm="ngForm" (ngSubmit)="onSubmitName(searchForm)" class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label for="searchByName">Search By Name</mat-label>
+            <input type="text" id="searchByName" name="searchByName" ngModel matInput>
+          </mat-form-field>
+          <p>
+            <button type="submit" mat-raised-button color="primary">Search</button>
+          </p>
+        </form>
+        <div *ngFor="let item of hotels">
+          <mat-card class="example-card">
+            <mat-card-content>
+              <mat-card-title>{{item.hotel_name}}</mat-card-title>
+              <mat-card-subtitle>{{item.city}}</mat-card-subtitle>
+              <mat-card-subtitle>{{item.street}} {{item.postal_code}}</mat-card-subtitle>
+              <p>Price ${{item.price}} </p>
+              <p>Email {{item.email}} </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary" routerLink="/newbooking">Book Stay</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
